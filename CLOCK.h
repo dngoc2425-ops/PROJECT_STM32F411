@@ -2,7 +2,7 @@
 #define  _RCC_STM32_H_
 // include thu vien 
 #include "stm32f4xx.h"
-#define RCC_BASE_ADDRESS 0x40023800
+#define RCC_BASE_ADDRESS 0x40023800UL
 void RCC_Configuration(void);
 typedef struct {
 	volatile uint32_t RCC_CR ;
