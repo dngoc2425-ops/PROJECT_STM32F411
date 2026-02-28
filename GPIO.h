@@ -51,6 +51,5 @@ void GPIO_SET_MODE (GPIO_TYPE *GPIOx, uint8_t pin,uint8_t mode);
 void GPIO_SET_OUTPUT ( GPIO_TYPE *GPIOx, uint8_t pin , uint8_t out);
 void GPIO_SET_SPEED (GPIO_TYPE *GPIOx , uint8_t pin , uint8_t speed );
 void GPIO_Set_Pull 	(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t pull);
-void GPIO_Set_AFRH 	(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t afrh); 
-void GPIO_Set_AFRL	(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t afrl);
+void GPIO_SetAF(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t AF);
 #endif
