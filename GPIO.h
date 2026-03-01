@@ -2,12 +2,12 @@
 #define _GPIO_H
 #include "stm32f4xx.h"
 // Define Base Address 
-#define GPIO_A_BASE 0x4002 0000U
-#define GPIO_B_BASE 0x4002 0400U
-#define GPIO_C_BASE 0x4002 0800U
-#define GPIO_D_BASE 0x4002 0C00U
-#define GPIO_E_BASE 0x4002 1000U
-#define GPIO_H_BASE 0x4002 1C00U
+#define GPIO_A_BASE 0x40020000U
+#define GPIO_B_BASE 0x40020400U
+#define GPIO_C_BASE 0x40020800U
+#define GPIO_D_BASE 0x40020C00U
+#define GPIO_E_BASE 0x40021000U
+#define GPIO_H_BASE 0x40021C00U
 
 typedef struct
 {
@@ -52,4 +52,10 @@ void GPIO_SET_OUTPUT ( GPIO_TYPE *GPIOx, uint8_t pin , uint8_t out);
 void GPIO_SET_SPEED (GPIO_TYPE *GPIOx , uint8_t pin , uint8_t speed );
 void GPIO_Set_Pull 	(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t pull);
 void GPIO_SetAF(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t AF);
+// main function 
+void GPIO_Config_SPI1(void); 
+void GPIO_Config_Analog(void); 
+void GPIO_Config_Buzzer_Output(void);
+void GPIO_Config_Motor_Output(void);
+void GPIO_Config_Relay_Output(void);
 #endif
