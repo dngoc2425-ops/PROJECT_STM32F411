@@ -1,20 +1,21 @@
+#include "ADC.h"
+#include "DMA.h"
 #include "CLOCK.h"
 #include "GPIO.h"
-#include "ADC.h"
+uint16_t adc_value[4];
 
-int main(void)
+int main()
 {
-    uint16_t adc_value[4];
+    RCC_Configuration();
+    GPIO_Config_Analog();
 
-    GPIO_Config_Analog();   // Config PA0-PA3 analog
-    ADC1_Init();            // Config ADC
-    ADC1_Start();           // Start ADC (ch? 1 l?n)
+    ADC1_Init();
+
+    DMA2_Stream0_ADC_Config(adc_value);
+
+    ADC1_Start();
 
     while(1)
     {
-        ADC1_Read_All(adc_value);
-
-        // Debug: d?t breakpoint xem adc_value[0..3]
-        // Ho?c x? lý giá tr? ? dây
     }
 }

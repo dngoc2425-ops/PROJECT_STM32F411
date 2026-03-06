@@ -26,8 +26,8 @@ void GPIO_Set_Pull 	(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t pull)
 {
 	if (pin>15) return ;
 	if (pull > GPIO_RESERVED) return ;
-	GPIOx->OSPEEDR &= ~(0x3   << (pin * 2));
-	GPIOx->OSPEEDR |=  (pull << (pin * 2));
+	GPIOx->PUPDR &= ~(0x3   << (pin * 2));
+	GPIOx->PUPDR |=  (pull << (pin * 2));
 }
 void GPIO_SetAF(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t AF)
 {
