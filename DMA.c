@@ -5,7 +5,10 @@ void DMA2_Stream0_ADC_Config(uint16_t *buffer)
 {
     DMA2_CONTROL->STREAM[0].CR &= ~(1<<0); // disable stream
     while(DMA2_CONTROL->STREAM[0].CR & 1);
-
+		// clear old flags
+    DMA2_CONTROL->LIFCR = 0xFFFFFFFF;
+    DMA2_CONTROL->HIFCR = 0xFFFFFFFF;
+	
     DMA2_CONTROL->STREAM[0].PAR  = (uint32_t)&ADC1_CONTROL->DR; // Chon dia chi nguon du lieu
     DMA2_CONTROL->STREAM[0].M0AR = (uint32_t)buffer; // Chon dia chi noi luu du lieu
 

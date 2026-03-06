@@ -354,14 +354,14 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08000304   Section        0  adc.o(.text.ADC1_Init)
     [Anonymous Symbol]                       0x080003bc   Section        0  adc.o(.text.ADC1_Start)
     [Anonymous Symbol]                       0x080003d0   Section        0  dma.o(.text.DMA2_Stream0_ADC_Config)
-    [Anonymous Symbol]                       0x0800043c   Section        0  gpio.o(.text.GPIO_Config_Analog)
-    [Anonymous Symbol]                       0x080004b4   Section        0  gpio.o(.text.GPIO_SET_MODE)
-    [Anonymous Symbol]                       0x08000508   Section        0  gpio.o(.text.GPIO_Set_Pull)
-    [Anonymous Symbol]                       0x0800055c   Section        0  clock.o(.text.RCC_Configuration)
-    [Anonymous Symbol]                       0x080005e0   Section        0  system_stm32f4xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x080005f4   Section        0  main.o(.text.main)
-    $v0                                      0x0800061c   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x0800061c   Section       26  fpinit.o(x$fpl$fpinit)
+    [Anonymous Symbol]                       0x08000454   Section        0  gpio.o(.text.GPIO_Config_Analog)
+    [Anonymous Symbol]                       0x080004cc   Section        0  gpio.o(.text.GPIO_SET_MODE)
+    [Anonymous Symbol]                       0x08000520   Section        0  gpio.o(.text.GPIO_Set_Pull)
+    [Anonymous Symbol]                       0x08000574   Section        0  clock.o(.text.RCC_Configuration)
+    [Anonymous Symbol]                       0x080005f8   Section        0  system_stm32f4xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x0800060c   Section        0  main.o(.text.main)
+    $v0                                      0x08000634   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x08000634   Section       26  fpinit.o(x$fpl$fpinit)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000068   Data         512  startup_stm32f411xe.o(HEAP)
     HEAP                                     0x20000068   Section      512  startup_stm32f411xe.o(HEAP)
@@ -537,18 +537,18 @@ Image Symbol Table
     __semihosting_library_function           0x08000303   Thumb Code     0  indicate_semi.o(.text)
     ADC1_Init                                0x08000305   Thumb Code   184  adc.o(.text.ADC1_Init)
     ADC1_Start                               0x080003bd   Thumb Code    18  adc.o(.text.ADC1_Start)
-    DMA2_Stream0_ADC_Config                  0x080003d1   Thumb Code   108  dma.o(.text.DMA2_Stream0_ADC_Config)
-    GPIO_Config_Analog                       0x0800043d   Thumb Code   118  gpio.o(.text.GPIO_Config_Analog)
-    GPIO_SET_MODE                            0x080004b5   Thumb Code    84  gpio.o(.text.GPIO_SET_MODE)
-    GPIO_Set_Pull                            0x08000509   Thumb Code    84  gpio.o(.text.GPIO_Set_Pull)
-    RCC_Configuration                        0x0800055d   Thumb Code   132  clock.o(.text.RCC_Configuration)
-    SystemInit                               0x080005e1   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
-    main                                     0x080005f5   Thumb Code    40  main.o(.text.main)
-    _fp_init                                 0x0800061d   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x08000635   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x08000635   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x08000638   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08000648   Number         0  anon$$obj.o(Region$$Table)
+    DMA2_Stream0_ADC_Config                  0x080003d1   Thumb Code   132  dma.o(.text.DMA2_Stream0_ADC_Config)
+    GPIO_Config_Analog                       0x08000455   Thumb Code   118  gpio.o(.text.GPIO_Config_Analog)
+    GPIO_SET_MODE                            0x080004cd   Thumb Code    84  gpio.o(.text.GPIO_SET_MODE)
+    GPIO_Set_Pull                            0x08000521   Thumb Code    84  gpio.o(.text.GPIO_Set_Pull)
+    RCC_Configuration                        0x08000575   Thumb Code   132  clock.o(.text.RCC_Configuration)
+    SystemInit                               0x080005f9   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
+    main                                     0x0800060d   Thumb Code    40  main.o(.text.main)
+    _fp_init                                 0x08000635   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x0800064d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x0800064d   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x08000650   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x08000660   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
     adc_value                                0x20000060   Data           8  main.o(.bss.adc_value)
@@ -561,9 +561,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000249
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x00000648, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000648, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000660, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -629,26 +629,26 @@ Memory Map of the image
     0x08000304   0x08000304   0x000000b8   Code   RO           59    .text.ADC1_Init     adc.o
     0x080003bc   0x080003bc   0x00000012   Code   RO           61    .text.ADC1_Start    adc.o
     0x080003ce   0x080003ce   0x00000002   PAD
-    0x080003d0   0x080003d0   0x0000006c   Code   RO           72    .text.DMA2_Stream0_ADC_Config  dma.o
-    0x0800043c   0x0800043c   0x00000076   Code   RO           30    .text.GPIO_Config_Analog  gpio.o
-    0x080004b2   0x080004b2   0x00000002   PAD
-    0x080004b4   0x080004b4   0x00000054   Code   RO           20    .text.GPIO_SET_MODE  gpio.o
-    0x08000508   0x08000508   0x00000054   Code   RO           26    .text.GPIO_Set_Pull  gpio.o
-    0x0800055c   0x0800055c   0x00000084   Code   RO            2    .text.RCC_Configuration  clock.o
-    0x080005e0   0x080005e0   0x00000012   Code   RO           89    .text.SystemInit    system_stm32f4xx.o
-    0x080005f2   0x080005f2   0x00000002   PAD
-    0x080005f4   0x080005f4   0x00000028   Code   RO           10    .text.main          main.o
-    0x0800061c   0x0800061c   0x0000001a   Code   RO          195    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x08000636   0x08000636   0x00000002   PAD
-    0x08000638   0x08000638   0x00000010   Data   RO          270    Region$$Table       anon$$obj.o
+    0x080003d0   0x080003d0   0x00000084   Code   RO           72    .text.DMA2_Stream0_ADC_Config  dma.o
+    0x08000454   0x08000454   0x00000076   Code   RO           30    .text.GPIO_Config_Analog  gpio.o
+    0x080004ca   0x080004ca   0x00000002   PAD
+    0x080004cc   0x080004cc   0x00000054   Code   RO           20    .text.GPIO_SET_MODE  gpio.o
+    0x08000520   0x08000520   0x00000054   Code   RO           26    .text.GPIO_Set_Pull  gpio.o
+    0x08000574   0x08000574   0x00000084   Code   RO            2    .text.RCC_Configuration  clock.o
+    0x080005f8   0x080005f8   0x00000012   Code   RO           89    .text.SystemInit    system_stm32f4xx.o
+    0x0800060a   0x0800060a   0x00000002   PAD
+    0x0800060c   0x0800060c   0x00000028   Code   RO           10    .text.main          main.o
+    0x08000634   0x08000634   0x0000001a   Code   RO          195    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x0800064e   0x0800064e   0x00000002   PAD
+    0x08000650   0x08000650   0x00000010   Data   RO          270    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000648, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x08000660, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x08000648, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x08000660, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -665,16 +665,16 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       202          0          0          0          0       2095   adc.o
+       202          0          0          0          0       2094   adc.o
        132          0          0          0          0       1597   clock.o
-       108          0          0          0          0       1330   dma.o
+       132          0          0          0          0       1335   dma.o
        286          0          0          0          0       3794   gpio.o
         40          0          0          0          8        582   main.o
         64         26        408          0       1536        892   startup_stm32f411xe.o
         18          0          0          0          0       2747   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-       856         26        424          0       1544      13037   Object Totals
+       880         26        424          0       1544      13041   Object Totals
          0          0         16          0          0          0   (incl. Generated)
          6          0          0          0          0          0   (incl. Padding)
 
@@ -724,15 +724,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1184         42        424          0       1640      13481   Grand Totals
-      1184         42        424          0       1640      13481   ELF Image Totals
-      1184         42        424          0          0          0   ROM Totals
+      1208         42        424          0       1640      13485   Grand Totals
+      1208         42        424          0       1640      13485   ELF Image Totals
+      1208         42        424          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 1608 (   1.57kB)
+    Total RO  Size (Code + RO Data)                 1632 (   1.59kB)
     Total RW  Size (RW Data + ZI Data)              1640 (   1.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       1608 (   1.57kB)
+    Total ROM Size (Code + RO Data + RW Data)       1632 (   1.59kB)
 
 ==============================================================================
 
