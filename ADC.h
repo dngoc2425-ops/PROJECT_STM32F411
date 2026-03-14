@@ -2,7 +2,7 @@
 #define _ADC_H
 #include <stm32f4xx.h>
 #include <stdint.h>
-#define ADC1_BASE_ 0x40012000
+#define ADC1_BASE_ 0x40012000UL
 typedef struct
 {
     volatile uint32_t SR;

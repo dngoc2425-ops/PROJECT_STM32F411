@@ -4,7 +4,8 @@
 #include <stdint.h>
 
 /* DMA2 base */
-#define DMA2_BASE 0x40026400
+#define DMA1_BASE 0x40026000UL
+#define DMA2_BASE 0x40026400UL
 
 typedef struct
 {
@@ -27,6 +28,7 @@ typedef struct
 
 } DMA_TYPE;
 
+#define DMA1_CONTROL ((DMA_TYPE*) DMA1_BASE)
 #define DMA2_CONTROL ((DMA_TYPE*) DMA2_BASE)
 
 void DMA2_Stream0_ADC_Config(uint16_t *buffer);

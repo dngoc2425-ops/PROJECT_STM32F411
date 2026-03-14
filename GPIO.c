@@ -68,15 +68,6 @@ void GPIO_Config_Buzzer_Output(void)
 	GPIO_Set_Pull(GPIOB, 0, GPIO_NO_UPDOWN);
 	GPIO_B_CONTROL->BSRR = ((1 << (0+16))); 
 }
-void Buzzer_ON(void)
-{
-    GPIOB->BSRR = (1 << 0);
-}
-
-void Buzzer_OFF(void)
-{
-    GPIOB->BSRR = (1 << 16);
-}
 void GPIO_Config_Relay_Output(void)
 {
 	CLK_CONTROL->RCC_AHB1ENR |= (1<<1);
@@ -86,14 +77,6 @@ void GPIO_Config_Relay_Output(void)
 	GPIO_Set_Pull(GPIOB, 2, GPIO_NO_UPDOWN);
 	GPIO_B_CONTROL->BSRR = ((1 << (2+16))); 
 }
-void Relay_ON(void)
-{
-    GPIOB->BSRR = (1 << 2);
-}
-void Relay_OFF(void)
-{
-    GPIOB->BSRR = ((1 << (2 + 16)));
-}
 void GPIO_Config_Motor_Output(void)
 {
 	CLK_CONTROL->RCC_AHB1ENR |= (1<<1);
@@ -102,14 +85,6 @@ void GPIO_Config_Motor_Output(void)
 	GPIO_SET_SPEED(GPIOB,1,GPIO_SPEED_LOW);
 	GPIO_Set_Pull(GPIOB, 1, GPIO_NO_UPDOWN);
 	GPIO_B_CONTROL->BSRR = (1 << (1+16)); 
-}
-void Motor_ON(void)
-{
-    GPIOB->BSRR = (1 << 1);
-}
-void Motor_OFF(void)
-{
-    GPIOB->BSRR = (1 << (1 + 16));
 }
 void GPIO_Config_SPI1(void)
 { // 1. ENABLE CLOCK FOR PORT A AND SPI1
@@ -140,4 +115,13 @@ void GPIO_Config_SPI1(void)
 	GPIO_Set_Pull(GPIOA, 5, GPIO_NO_UPDOWN);
 	GPIO_Set_Pull(GPIOA, 6, GPIO_NO_UPDOWN);
 	GPIO_Set_Pull(GPIOA, 7, GPIO_NO_UPDOWN);
+}
+void SPI1_Select(void)
+{
+    GPIO_A_CONTROL->BSRR = (1<<(4+16)); // NSS LOW
+}
+
+void SPI1_Unselect(void)
+{
+    GPIO_A_CONTROL->BSRR = (1<<4); // NSS HIGH
 }

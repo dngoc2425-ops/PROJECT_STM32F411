@@ -1,6 +1,7 @@
 #ifndef _GPIO_H
 #define _GPIO_H
 #include "stm32f4xx.h"
+#include "stdint.h"
 // Define Base Address 
 #define GPIO_A_BASE 0x40020000U
 #define GPIO_B_BASE 0x40020400U
@@ -11,16 +12,16 @@
 
 typedef struct
 {
-	volatile uint32_t MODER ;
-	volatile uint32_t OTYPER ;
-	volatile uint32_t OSPEEDR ;
-	volatile uint32_t PUPDR ; 
-	volatile uint32_t IDR ;
-	volatile uint32_t ODR ;
-	volatile uint32_t BSRR ;
-	volatile uint32_t LCKR;
-	volatile uint32_t AFRL;
-	volatile uint32_t AFRH;							
+	volatile uint32_t MODER; 		//0X00
+	volatile uint32_t OTYPER;		//0X04
+	volatile uint32_t OSPEEDR;	//0X08
+	volatile uint32_t PUPDR;		//0X0C
+	volatile uint32_t IDR;			//0X10
+	volatile uint32_t ODR;			//0X14
+	volatile uint32_t BSRR;			//0X18
+	volatile uint32_t LCKR;			//0X1C
+	volatile uint32_t AFRL;			//0X20
+	volatile uint32_t AFRH;			//0X24							
 } GPIO_TYPE;
 #define GPIO_A_CONTROL ((GPIO_TYPE*) GPIO_A_BASE)
 #define GPIO_B_CONTROL ((GPIO_TYPE*) GPIO_B_BASE)
@@ -58,4 +59,7 @@ void GPIO_Config_Analog(void);
 void GPIO_Config_Buzzer_Output(void);
 void GPIO_Config_Motor_Output(void);
 void GPIO_Config_Relay_Output(void);
+// Chip select 
+void SPI1_Select(void);
+void SPI1_Unselect(void);
 #endif

@@ -429,6 +429,26 @@
               <FileType>1</FileType>
               <FilePath>.\DMA.c</FilePath>
             </File>
+            <File>
+              <FileName>ACTUATOR.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\ACTUATOR.h</FilePath>
+            </File>
+            <File>
+              <FileName>ACTUATOR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\ACTUATOR.c</FilePath>
+            </File>
+            <File>
+              <FileName>SENSORS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SENSORS.h</FilePath>
+            </File>
+            <File>
+              <FileName>SENSOR.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SENSOR.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

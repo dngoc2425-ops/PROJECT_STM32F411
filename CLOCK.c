@@ -11,7 +11,11 @@ void RCC_Configuration (void)
 	// 2. Set the POWER ENABLE CLOCK and VOLTAGE REGULATOR
 		CLK_CONTROL->RCC_APB1ENR |= (1<<28);
 	// 3. Configure the FLASH PREFETCH and the LATENCY Related Setting
-		FLASH->CR=0;
+		FLASH->ACR=0;
+	  // 4. Configure the Prescalarts HCLK, PCLK1, PCLK2
+		CLK_CONTROL->RCC_CFGR &= ~(0xF << 4); 
+		CLK_CONTROL->RCC_CFGR &= ~(0x7 << 10); 
+		CLK_CONTROL->RCC_CFGR	&= ~(0x7 << 13);
 	// Clear and set bit 01 to choose HSE
 	  CLK_CONTROL->RCC_CFGR &= ~(3 << 0 );
 	  CLK_CONTROL->RCC_CFGR |= (1 << 0 );

@@ -22,5 +22,5 @@ void DMA2_Stream0_ADC_Config(uint16_t *buffer)
           (1<<11) |   // peripheral size 16bit
           (0<<6);     // peripheral->memory
 
-    DMA2_CONTROL->STREAM[0].CR |= (1<<0); // enable
+    DMA2_CONTROL->STREAM[0].CR |= (1<<0); // enable stream
 }
