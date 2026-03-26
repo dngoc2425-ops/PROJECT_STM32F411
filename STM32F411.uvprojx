@@ -420,19 +420,14 @@
               <FilePath>.\ADC.h</FilePath>
             </File>
             <File>
-              <FileName>DMA.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\DMA.h</FilePath>
-            </File>
-            <File>
               <FileName>DMA.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\DMA.c</FilePath>
             </File>
             <File>
-              <FileName>ACTUATOR.h</FileName>
+              <FileName>DMA.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\ACTUATOR.h</FilePath>
+              <FilePath>.\DMA.h</FilePath>
             </File>
             <File>
               <FileName>ACTUATOR.c</FileName>
@@ -440,14 +435,29 @@
               <FilePath>.\ACTUATOR.c</FilePath>
             </File>
             <File>
-              <FileName>SENSORS.h</FileName>
+              <FileName>ACTUATOR.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\SENSORS.h</FilePath>
+              <FilePath>.\ACTUATOR.h</FilePath>
             </File>
             <File>
               <FileName>SENSOR.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\SENSOR.c</FilePath>
+            </File>
+            <File>
+              <FileName>SENSORS.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SENSORS.h</FilePath>
+            </File>
+            <File>
+              <FileName>SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\SPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>SPI.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\SPI.h</FilePath>
             </File>
           </Files>
         </Group>

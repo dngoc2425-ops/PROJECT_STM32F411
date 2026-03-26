@@ -15,9 +15,10 @@ int main()
 
     ADC1_Init();
 
+		DMA2_Stream0_ADC_Config((uint16_t*)&adc_data);
+	
     ADC1_Start();
 
-		DMA2_Stream0_ADC_Config((uint16_t*)&adc_data);
 	
     while(1)
     {	
