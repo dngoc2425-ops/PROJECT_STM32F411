@@ -459,6 +459,16 @@
               <FileType>5</FileType>
               <FilePath>.\SPI.h</FilePath>
             </File>
+            <File>
+              <FileName>NVIC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\NVIC.c</FilePath>
+            </File>
+            <File>
+              <FileName>NVIC.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\NVIC.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

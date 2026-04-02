@@ -1,1 +1,1 @@
-./objects/spi.o: SPI.c
+./objects/spi.o: SPI.c SPI.h

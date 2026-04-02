@@ -4,6 +4,8 @@
 #include "DMA.h"
 #include "ACTUATOR.h"
 #include "SENSORS.h"
+#include "NVIC.h"
+
 int main()
 {
     RCC_Configuration();
