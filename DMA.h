@@ -1,28 +1,25 @@
 #ifndef _DMA_H
 #define _DMA_H
-
-#include <stdint.h>
-
 /* DMA2 base */
 #define DMA1_BASE 0x40026000UL
 #define DMA2_BASE 0x40026400UL
 
 typedef struct
 {
-    volatile uint32_t CR;
-    volatile uint32_t NDTR;
-    volatile uint32_t PAR;
-    volatile uint32_t M0AR;
-    volatile uint32_t M1AR;
-    volatile uint32_t FCR;
+    volatile unsigned long CR;
+    volatile unsigned long NDTR;
+    volatile unsigned long PAR;
+    volatile unsigned long M0AR;
+    volatile unsigned long M1AR;
+    volatile unsigned long FCR;
 } DMA_STREAM_TYPE;
 
 typedef struct
 {
-    volatile uint32_t LISR;
-    volatile uint32_t HISR;
-    volatile uint32_t LIFCR;
-    volatile uint32_t HIFCR;
+    volatile unsigned long LISR;
+    volatile unsigned long HISR;
+    volatile unsigned long LIFCR;
+    volatile unsigned long HIFCR;
 
     DMA_STREAM_TYPE STREAM[8];
 
@@ -31,6 +28,6 @@ typedef struct
 #define DMA1_CONTROL ((DMA_TYPE*) DMA1_BASE)
 #define DMA2_CONTROL ((DMA_TYPE*) DMA2_BASE)
 
-void DMA2_Stream0_ADC_Config(uint16_t *buffer);
+void DMA2_Stream0_ADC_Config(unsigned short *buffer);
 
 #endif

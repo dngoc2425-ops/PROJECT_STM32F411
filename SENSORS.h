@@ -1,14 +1,12 @@
 #ifndef SENSOR_H
 #define SENSOR_H
 
-#include <stdint.h>
-
 typedef struct
 {
-    uint16_t GAS;
-    uint16_t TEMPERATURE;
-    uint16_t HUMIDITY;
-    uint16_t LIGHT;
+    unsigned short GAS;
+    unsigned short TEMPERATURE;
+    unsigned short HUMIDITY;
+    unsigned short LIGHT;
 
 } ADC_DATA;
 

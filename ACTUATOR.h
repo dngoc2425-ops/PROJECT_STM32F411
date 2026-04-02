@@ -1,6 +1,5 @@
 #ifndef ACTUATOR_H
 #define ACTUATOR_H
-#include <stdint.h>
 
 // Buzzer 
 void Buzzer_ON(void);

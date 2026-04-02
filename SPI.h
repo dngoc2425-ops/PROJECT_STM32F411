@@ -1,8 +1,6 @@
 #ifndef _SPI_H
 #define _SPI_H
 
-#include <stdint.h>
-#include "stm32f4xx.h"
 
 /* ================= BASE ADDRESS ================= */
 #define SPI1_BASE_ADDRESSED 0x40013000UL
@@ -13,15 +11,15 @@
 /* ================= SPI REGISTER STRUCT ================= */
 typedef struct
 {
-volatile uint32_t CR1;     // 0x00
-volatile uint32_t CR2;     // 0x04
-volatile uint32_t SR;      // 0x08
-volatile uint32_t DR;      // 0x0C
-volatile uint32_t CRCPR;   // 0x10
-volatile uint32_t RXCRCR;  // 0x14
-volatile uint32_t TXCRCR;  // 0x18
-volatile uint32_t I2SCFGR; // 0x1C
-volatile uint32_t I2SPR;   // 0x20
+volatile unsigned long CR1;     // 0x00
+volatile unsigned long CR2;     // 0x04
+volatile unsigned long SR;      // 0x08
+volatile unsigned long DR;      // 0x0C
+volatile unsigned long CRCPR;   // 0x10
+volatile unsigned long RXCRCR;  // 0x14
+volatile unsigned long TXCRCR;  // 0x18
+volatile unsigned long I2SCFGR; // 0x1C
+volatile unsigned long I2SPR;   // 0x20
 } SPI_TYPE;
 
 /* ================= POINTER ================= */
@@ -37,16 +35,16 @@ volatile uint32_t I2SPR;   // 0x20
 /* ================= FUNCTION PROTOTYPE ================= */
 
 // Init SPI1 (mode: slave/master)
-void SPI1_Init(uint8_t mode);
+void SPI1_Init(unsigned char mode);
 
 // Send 1 byte
-uint8_t SPI1_Transfer(uint8_t data);
+unsigned char SPI1_Transfer(unsigned char data);
 
 // Send buffer
-void SPI1_SendBuffer(uint8_t *data, uint16_t length);
+void SPI1_SendBuffer(unsigned char *data, unsigned short length);
 
 // Receive buffer
-void SPI1_ReceiveBuffer(uint8_t *data, uint16_t length);
+void SPI1_ReceiveBuffer(unsigned char *data, unsigned short length);
 
 #endif
 

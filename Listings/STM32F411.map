@@ -379,10 +379,10 @@ Image Symbol Table
     [Anonymous Symbol]                       0x08000770   Section        0  actuator.o(.text.Motor_OFF)
     [Anonymous Symbol]                       0x08000780   Section        0  actuator.o(.text.Motor_ON)
     [Anonymous Symbol]                       0x08000790   Section        0  clock.o(.text.RCC_Configuration)
-    [Anonymous Symbol]                       0x08000834   Section        0  system_stm32f4xx.o(.text.SystemInit)
-    [Anonymous Symbol]                       0x08000848   Section        0  main.o(.text.main)
-    $v0                                      0x0800089a   Number         0  fpinit.o(x$fpl$fpinit)
-    x$fpl$fpinit                             0x0800089a   Section       26  fpinit.o(x$fpl$fpinit)
+    [Anonymous Symbol]                       0x08000820   Section        0  system_stm32f4xx.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x08000834   Section        0  main.o(.text.main)
+    $v0                                      0x08000886   Number         0  fpinit.o(x$fpl$fpinit)
+    x$fpl$fpinit                             0x08000886   Section       26  fpinit.o(x$fpl$fpinit)
     .bss                                     0x20000000   Section       96  libspace.o(.bss)
     Heap_Mem                                 0x20000068   Data         512  startup_stm32f411xe.o(HEAP)
     HEAP                                     0x20000068   Section      512  startup_stm32f411xe.o(HEAP)
@@ -572,14 +572,14 @@ Image Symbol Table
     Get_Temperature_C                        0x08000751   Thumb Code    32  sensor.o(.text.Get_Temperature_C)
     Motor_OFF                                0x08000771   Thumb Code    16  actuator.o(.text.Motor_OFF)
     Motor_ON                                 0x08000781   Thumb Code    14  actuator.o(.text.Motor_ON)
-    RCC_Configuration                        0x08000791   Thumb Code   162  clock.o(.text.RCC_Configuration)
-    SystemInit                               0x08000835   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
-    main                                     0x08000849   Thumb Code    82  main.o(.text.main)
-    _fp_init                                 0x0800089b   Thumb Code    26  fpinit.o(x$fpl$fpinit)
-    __fplib_config_fpu_vfp                   0x080008b3   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    __fplib_config_pureend_doubles           0x080008b3   Thumb Code     0  fpinit.o(x$fpl$fpinit)
-    Region$$Table$$Base                      0x080008b4   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x080008c4   Number         0  anon$$obj.o(Region$$Table)
+    RCC_Configuration                        0x08000791   Thumb Code   144  clock.o(.text.RCC_Configuration)
+    SystemInit                               0x08000821   Thumb Code    18  system_stm32f4xx.o(.text.SystemInit)
+    main                                     0x08000835   Thumb Code    82  main.o(.text.main)
+    _fp_init                                 0x08000887   Thumb Code    26  fpinit.o(x$fpl$fpinit)
+    __fplib_config_fpu_vfp                   0x0800089f   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    __fplib_config_pureend_doubles           0x0800089f   Thumb Code     0  fpinit.o(x$fpl$fpinit)
+    Region$$Table$$Base                      0x080008a0   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x080008b0   Number         0  anon$$obj.o(Region$$Table)
     __libspace_start                         0x20000000   Data          96  libspace.o(.bss)
     __temporary_stack_top$libspace           0x20000060   Data           0  libspace.o(.bss)
     adc_data                                 0x20000060   Data           8  sensor.o(.bss.adc_data)
@@ -592,9 +592,9 @@ Memory Map of the image
 
   Image Entry point : 0x08000249
 
-  Load Region LR_1 (Base: 0x08000000, Size: 0x000008c4, Max: 0xffffffff, ABSOLUTE)
+  Load Region LR_1 (Base: 0x08000000, Size: 0x000008b0, Max: 0xffffffff, ABSOLUTE)
 
-    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000008c4, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RO (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000008b0, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -679,21 +679,20 @@ Memory Map of the image
     0x08000770   0x08000770   0x00000010   Code   RO           79    .text.Motor_OFF     actuator.o
     0x08000780   0x08000780   0x0000000e   Code   RO           77    .text.Motor_ON      actuator.o
     0x0800078e   0x0800078e   0x00000002   PAD
-    0x08000790   0x08000790   0x000000a2   Code   RO            2    .text.RCC_Configuration  clock.o
+    0x08000790   0x08000790   0x00000090   Code   RO            2    .text.RCC_Configuration  clock.o
+    0x08000820   0x08000820   0x00000012   Code   RO          107    .text.SystemInit    system_stm32f4xx.o
     0x08000832   0x08000832   0x00000002   PAD
-    0x08000834   0x08000834   0x00000012   Code   RO          107    .text.SystemInit    system_stm32f4xx.o
-    0x08000846   0x08000846   0x00000002   PAD
-    0x08000848   0x08000848   0x00000052   Code   RO           10    .text.main          main.o
-    0x0800089a   0x0800089a   0x0000001a   Code   RO          213    x$fpl$fpinit        fz_wm.l(fpinit.o)
-    0x080008b4   0x080008b4   0x00000010   Data   RO          288    Region$$Table       anon$$obj.o
+    0x08000834   0x08000834   0x00000052   Code   RO           10    .text.main          main.o
+    0x08000886   0x08000886   0x0000001a   Code   RO          213    x$fpl$fpinit        fz_wm.l(fpinit.o)
+    0x080008a0   0x080008a0   0x00000010   Data   RO          288    Region$$Table       anon$$obj.o
 
 
-    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080008c4, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_RW (Exec base: 0x20000000, Load base: 0x080008b0, Size: 0x00000000, Max: 0xffffffff, ABSOLUTE)
 
     **** No section assigned to this execution region ****
 
 
-    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080008c4, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
+    Execution Region ER_ZI (Exec base: 0x20000000, Load base: 0x080008b0, Size: 0x00000668, Max: 0xffffffff, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -710,20 +709,20 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-        60          0          0          0          0       1269   actuator.o
-       210          0          0          0          0       1856   adc.o
-       162          0          0          0          0       1607   clock.o
-       132          0          0          0          0       1335   dma.o
-       718          0          0          0          0       3497   gpio.o
-        82          0          0          0          0        513   main.o
-        32          0          0          0          8        683   sensor.o
+        60          0          0          0          0       1034   actuator.o
+       210          0          0          0          0       1783   adc.o
+       144          0          0          0          0       1379   clock.o
+       132          0          0          0          0       1242   dma.o
+       718          0          0          0          0       3098   gpio.o
+        82          0          0          0          0        424   main.o
+        32          0          0          0          8        609   sensor.o
         64         26        408          0       1536        892   startup_stm32f411xe.o
         18          0          0          0          0       2747   system_stm32f4xx.o
 
     ----------------------------------------------------------------------
-      1494         26        424          0       1544      14399   Object Totals
+      1474         26        424          0       1544      13208   Object Totals
          0          0         16          0          0          0   (incl. Generated)
-        16          0          0          0          0          0   (incl. Padding)
+        14          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
@@ -771,15 +770,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-      1820         42        424          0       1640      14803   Grand Totals
-      1820         42        424          0       1640      14803   ELF Image Totals
-      1820         42        424          0          0          0   ROM Totals
+      1800         42        424          0       1640      13612   Grand Totals
+      1800         42        424          0       1640      13612   ELF Image Totals
+      1800         42        424          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                 2244 (   2.19kB)
+    Total RO  Size (Code + RO Data)                 2224 (   2.17kB)
     Total RW  Size (RW Data + ZI Data)              1640 (   1.60kB)
-    Total ROM Size (Code + RO Data + RW Data)       2244 (   2.19kB)
+    Total ROM Size (Code + RO Data + RW Data)       2224 (   2.17kB)
 
 ==============================================================================
 

@@ -1,7 +1,5 @@
 #ifndef _GPIO_H
 #define _GPIO_H
-#include "stm32f4xx.h"
-#include "stdint.h"
 // Define Base Address 
 #define GPIO_A_BASE 0x40020000U
 #define GPIO_B_BASE 0x40020400U
@@ -12,16 +10,16 @@
 
 typedef struct
 {
-	volatile uint32_t MODER; 		//0X00
-	volatile uint32_t OTYPER;		//0X04
-	volatile uint32_t OSPEEDR;	//0X08
-	volatile uint32_t PUPDR;		//0X0C
-	volatile uint32_t IDR;			//0X10
-	volatile uint32_t ODR;			//0X14
-	volatile uint32_t BSRR;			//0X18
-	volatile uint32_t LCKR;			//0X1C
-	volatile uint32_t AFRL;			//0X20
-	volatile uint32_t AFRH;			//0X24							
+	volatile unsigned long  MODER; 		//0X00
+	volatile unsigned long  OTYPER;		//0X04
+	volatile unsigned long  OSPEEDR;	//0X08
+	volatile unsigned long  PUPDR;		//0X0C
+	volatile unsigned long  IDR;			//0X10
+	volatile unsigned long  ODR;			//0X14
+	volatile unsigned long  BSRR;			//0X18
+	volatile unsigned long  LCKR;			//0X1C
+	volatile unsigned long  AFRL;			//0X20
+	volatile unsigned long  AFRH;			//0X24							
 } GPIO_TYPE;
 #define GPIO_A_CONTROL ((GPIO_TYPE*) GPIO_A_BASE)
 #define GPIO_B_CONTROL ((GPIO_TYPE*) GPIO_B_BASE)
@@ -48,11 +46,11 @@ typedef struct
 #define GPIO_PULL_DOWN			0x2
 #define GPIO_RESERVED				0x3
 // Define function
-void GPIO_SET_MODE (GPIO_TYPE *GPIOx, uint8_t pin,uint8_t mode);
-void GPIO_SET_OUTPUT ( GPIO_TYPE *GPIOx, uint8_t pin , uint8_t out);
-void GPIO_SET_SPEED (GPIO_TYPE *GPIOx , uint8_t pin , uint8_t speed );
-void GPIO_Set_Pull 	(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t pull);
-void GPIO_SetAF(GPIO_TYPE *GPIOx, uint8_t pin, uint8_t AF);
+void GPIO_SET_MODE (GPIO_TYPE *GPIOx, unsigned char pin,unsigned char mode);
+void GPIO_SET_OUTPUT ( GPIO_TYPE *GPIOx, unsigned char pin , unsigned char out);
+void GPIO_SET_SPEED (GPIO_TYPE *GPIOx , unsigned char pin , unsigned char speed );
+void GPIO_Set_Pull 	(GPIO_TYPE *GPIOx, unsigned char pin, unsigned char pull);
+void GPIO_SetAF(GPIO_TYPE *GPIOx, unsigned char pin, unsigned char AF);
 // main function 
 void GPIO_Config_SPI1(void); 
 void GPIO_Config_Analog(void); 
