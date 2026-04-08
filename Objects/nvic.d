@@ -1,1 +1,1 @@
-./objects/nvic.o: NVIC.c
+./objects/nvic.o: NVIC.c NVIC.h
